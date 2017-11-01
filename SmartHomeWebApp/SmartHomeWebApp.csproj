@@ -18,7 +18,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SmartHome.Laptop\SmartHome.Laptop.csproj" />
     <ProjectReference Include="..\SmartHome\SmartHome.csproj" />
+    <ProjectReference Include="..\YoutubeClient\YoutubeClient.csproj" />
   </ItemGroup>
 
 </Project>

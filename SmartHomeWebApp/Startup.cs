@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SmartHome;
 using SmartHome.Types;
+using YoutubeClient;
 
 namespace SmartHomeWebApp
 {
@@ -31,6 +32,9 @@ namespace SmartHomeWebApp
             services.AddSingleton<LightsInputType>();
             services.AddSingleton<LightsStateEnum>();
             services.AddSingleton<LightsModeEnum>();
+
+            services.AddSingleton<YoutubeClient.YoutubeClient>();
+            services.AddSingleton<ChromeHandler>();
 
             services.AddSingleton(s => new SmartHomeSchema(new FuncDependencyResolver(s.GetService)));
 
